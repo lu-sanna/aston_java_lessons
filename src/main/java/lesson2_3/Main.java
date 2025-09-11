@@ -55,7 +55,7 @@ public class Main {
             productsArr[i].printInfo();
         }
 
-        Park myPark = new Park("Солнечный",7);
+        Park myPark = new Park("Солнечный",5);
         // Добавляем аттракционы в парк
         myPark.addAttraction("Американские горки",
                 LocalTime.of(10, 0),  // время открытия

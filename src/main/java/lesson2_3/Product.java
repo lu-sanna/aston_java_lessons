@@ -11,8 +11,14 @@ public class Product {
     private double price;
     private boolean isReserved;
 
-    public Product(String name, LocalDate productionDate, String manufacturer,
-                   String countryOfOrigin, double price, boolean isReserved) {
+    public Product(
+            String name,
+            LocalDate productionDate,
+            String manufacturer,
+            String countryOfOrigin,
+            double price,
+            boolean isReserved
+    ) {
         this.name = name;
         this.productionDate = productionDate;
         this.manufacturer = manufacturer;

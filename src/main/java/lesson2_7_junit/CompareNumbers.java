@@ -5,7 +5,7 @@ public class CompareNumbers {
 if (a>b){
     return a + " больше " + b;
 }
-else if (a<b){
+else if (a<b) {
     return a + " меньше " + b;
 }
 else {

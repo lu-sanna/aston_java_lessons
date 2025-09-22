@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class TriangleAreaTest {
+public class TriangleAreaTest  {
     //проверка равенства, тест валидных значений
     @Test
     void testAreaValidVal(){

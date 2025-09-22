@@ -1,7 +1,7 @@
 package lesson2_7_junit;
 
 public class Calculator {
-    public static int calculate(int a, int b, String operation){
+    public static int calculate (int a, int b, String operation){
 switch (operation) {
     case "+":
         return a+b;

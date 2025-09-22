@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class CalculatorTest {
+public class CalculatorTest  {
 @Test
 void testCalculateAdd(){
     assertEquals(41, Calculator.calculate(36,5, "+"));

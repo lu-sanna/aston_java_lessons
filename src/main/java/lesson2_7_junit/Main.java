@@ -1,6 +1,6 @@
 package lesson2_7_junit;
 
-public class Main {
+public class Main  {
     public static void main(String[] args) {
         // 1. Факториал
         System.out.println("== ЗАДАНИЕ 1 ==");

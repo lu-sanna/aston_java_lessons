@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class FactorialTest  {
 //проверка равенства
     @Test
-    public void testFactorialPositiveNumb(){
+    void testFactorialPositiveNumb(){
         assertEquals(1, Factorial.factorial(1));
         assertEquals(2, Factorial.factorial(2));
         assertEquals(6, Factorial.factorial(3));
@@ -16,13 +16,13 @@ public class FactorialTest  {
     }
 
     @Test
-    public void testFactorialZero() {
+    void testFactorialZero() {
         assertEquals(1, Factorial.factorial(0));
     } //0! = 1
 
     //проверка исключений
     @Test
-    public void testFactorialNegativeNumb() {
+    void testFactorialNegativeNumb() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             Factorial.factorial(-2);
         });

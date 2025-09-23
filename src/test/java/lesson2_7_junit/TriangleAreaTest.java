@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class TriangleAreaTest  {
     //проверка равенства, тест валидных значений
     @Test
-    public void testAreaValidVal(){
+    void testAreaValidVal(){
         assertEquals(25.0, TriangleArea.area(10,5));
     }
 
     //проверка исключений, тест невалидных значений
     @Test
-    public void testAreaInvalidVal(){
+    void testAreaInvalidVal(){
         assertThrows(IllegalArgumentException.class, () -> TriangleArea.area(-1,5));
     }
 }

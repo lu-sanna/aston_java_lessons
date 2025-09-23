@@ -1,15 +1,21 @@
 package lesson2_7_TestNG;
 
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
+
 public class CompareNumbersTestNG {
-    public static String compare (int a, int b) {
-if (a>b){
-    return a + " больше " + b;
-}
-else if (a<b){
-    return a + " меньше " + b;
-}
-else {
-    return a + " равно " + b;
-}
+    @Test
+    public void testCompareNumb(){
+        assertEquals(CompareNumbers.compare(8,5),"8 больше 5");
+    }
+
+    @Test
+    public void testCompareEqual(){
+        assertEquals(CompareNumbers.compare(5,5),"5 равно 5");
+    }
+
+    @Test
+    public void testCompareNegativeNumbers(){
+        assertEquals(CompareNumbers.compare(-5,5), "-5 меньше 5");
     }
 }

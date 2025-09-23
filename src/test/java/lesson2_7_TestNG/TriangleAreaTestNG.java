@@ -1,11 +1,16 @@
 package lesson2_7_TestNG;
 
-public class TriangleAreaTestNG {
-    public static double area (double a, double h) { // a - основание треугольника , h - выста треугольника
-        if (a <= 0 || h <= 0) {
-            throw new IllegalArgumentException("Основание и высота треугольника должны быть положительными");
-        }
-        return (a * h) / 2;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
+public class TriangleAreaTestNG {
+    @Test
+    public void testAreaValidVal(){
+        assertEquals(TriangleArea.area(10,5),25);
+    }
+
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void testAreaInvalidVal() {
+        TriangleArea.area(-10, 5);
     }
 }

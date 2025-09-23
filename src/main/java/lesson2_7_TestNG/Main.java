@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         // 1. Факториал
         System.out.println("== ЗАДАНИЕ 1 ==");
-        System.out.println("Факториал 2: " + Factorial.factorial(2));
+        System.out.println("Факториал 3: " + Factorial.factorial(6));
 
         // 2. Площадь треугольника
         System.out.println("\n== ЗАДАНИЕ 2 ==");

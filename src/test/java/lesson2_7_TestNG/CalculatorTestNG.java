@@ -1,19 +1,44 @@
 package lesson2_7_TestNG;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
 public class CalculatorTestNG {
-    public static int calculate(int a, int b, String operation){
-switch (operation) {
-    case "+":
-        return a+b;
-    case "-":
-        return a-b;
-    case "*":
-        return a*b;
-    case "/":
-        if (b == 0) {
-            throw new ArithmeticException("Делить на ноль нельзя!");
-        }
+    //сложение
+    @Test
+    public void testCalculateAdd(){
+       assertEquals(Calculator.calculate(36,5,"+"),41);
+       assertEquals(Calculator.calculate(-10, 5, "+"), -5);
+       assertEquals(Calculator.calculate(0, 5, "+"), 5);
+   }
+
+    //вычитание
+   @Test
+   public void testCalculateSubtraction(){
+       assertEquals(Calculator.calculate(10, 5, "-"), 5);
+       assertEquals(Calculator.calculate(-10, 5, "-"), -15);
+       assertEquals(Calculator.calculate(5, 10, "-"), -5);
+   }
+
+    //умножение
+   @Test
+   public void testCalculateMultiplication(){
+       assertEquals(Calculator.calculate(10, 9, "*"), 90);
+       assertEquals(Calculator.calculate(-10, 5, "*"), -50);
+       assertEquals(Calculator.calculate(-10, -5, "*"), 50);
+   }
+
+    //деление
+    @Test
+    public void testCalculateDivision() {
+        assertEquals(Calculator.calculate(24, 5, "/"), 4);
+        assertEquals(Calculator.calculate(-10, 5, "/"), -2);
     }
-        return a/b;
+
+    //деление на ноль
+    @Test(expectedExceptions = ArithmeticException.class)
+    public void testCalculateZero() {
+        Calculator.calculate(10, 0, "/");
     }
 }
+
+

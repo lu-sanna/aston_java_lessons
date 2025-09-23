@@ -2,7 +2,7 @@ package lesson2_7_TestNG;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
-public class CalculatorTestNG {
+public class CalculatorTestNg {
     //сложение
     @Test
     public void testCalculateAdd(){
@@ -16,7 +16,7 @@ public class CalculatorTestNG {
    public void testCalculateSubtraction(){
        assertEquals(Calculator.calculate(10, 5, "-"), 5);
        assertEquals(Calculator.calculate(-10, 5, "-"), -15);
-       assertEquals(Calculator.calculate(5, 10, "-"), -5);
+       assertEquals(Calculator.calculate(-10, -5, "-"), -5);
    }
 
     //умножение

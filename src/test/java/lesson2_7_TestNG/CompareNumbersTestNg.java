@@ -3,7 +3,7 @@ package lesson2_7_TestNG;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
-public class CompareNumbersTestNG {
+public class CompareNumbersTestNg {
     @Test
     public void testCompareNumb(){
         assertEquals(CompareNumbers.compare(8,5),"8 больше 5");

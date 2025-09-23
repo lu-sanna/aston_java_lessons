@@ -3,7 +3,7 @@ package lesson2_7_TestNG;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
-public class FactorialTestNG {
+public class FactorialTestNg {
     @Test
     public void FactorialPositiveNumb(){
         assertEquals(Factorial.factorial(1), 1);

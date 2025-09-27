@@ -21,7 +21,7 @@ public class RequestMethodsTest {
                 .body("args.foo2", equalTo("bar2"));
     }
 
-    // 2. POST Request - Form Data - использует foo1=bar1, foo2=bar2
+    // 2. POST Request (Form Data) - использует foo1=bar1, foo2=bar2
     @Test
     void testPostFormData() {
         given()
@@ -37,7 +37,7 @@ public class RequestMethodsTest {
                 .body("form.foo2", equalTo("bar2"));
     }
 
-    // 3. POST Request - Raw Text - использует простой текст
+    // 3. POST Request (Raw Text) - использует простой текст
     @Test
     void testPostRawText() {
         given()
@@ -99,8 +99,8 @@ public class RequestMethodsTest {
                 .get("/get")
                 .then()
                 .statusCode(200)
-                .body("args", notNullValue()) // проверяем что args существует
-                .body("headers", notNullValue()) // проверяем что headers существует
-                .body("url", notNullValue()); // проверяем что url существует
+                .body("args", notNullValue()) // проверяем, что args существует
+                .body("headers", notNullValue()) // проверяем, что headers существует
+                .body("url", notNullValue()); // проверяем, что url существует
     }
 }

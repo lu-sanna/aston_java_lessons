@@ -13,7 +13,9 @@ switch (operation) {
         if (b == 0) {
             throw new ArithmeticException("Делить на ноль нельзя!");
         }
-    }
-        return a/b;
+        return a / b;
+    default:
+        throw new IllegalArgumentException("Неизвестная операция: " + operation);
+        }
     }
 }

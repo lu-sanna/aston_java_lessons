@@ -37,4 +37,10 @@ public class CalculatorTest  {
     void testCalculateZero(){
         assertThrows(ArithmeticException.class, ()-> Calculator.calculate(10,0,"/"));
     }
+
+
+    @Test
+    void testUnknownOperation() {
+        assertThrows(IllegalArgumentException.class, () -> Calculator.calculate(10, 5, "%"));
+    }
 }

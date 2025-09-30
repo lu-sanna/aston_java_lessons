@@ -39,6 +39,11 @@ public class CalculatorTestNg {
     public void testCalculateZero() {
         Calculator.calculate(10, 0, "/");
     }
+
+@Test (expectedExceptions = IllegalArgumentException.class)
+    public void testUnknownOperation() {
+        Calculator.calculate(10,5,"%");
+    }
 }
 
 

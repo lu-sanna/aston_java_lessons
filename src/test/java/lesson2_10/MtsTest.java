@@ -52,7 +52,7 @@ public class MtsTest {
         }
     }
 
-   //ТЕСТЫ
+    //ТЕСТЫ
 //ТЕСТЫ К ДЗ № 2_9
     @Test
     void testBlockTitle() {

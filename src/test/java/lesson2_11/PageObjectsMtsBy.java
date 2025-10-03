@@ -52,7 +52,7 @@ public class PageObjectsMtsBy {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    // МЕТОДЫ ИЗ ПРОШЛОГО ЗАДАНИЯ " 2_9
+    // МЕТОДЫ ИЗ ПРОШЛОГО ЗАДАНИЯ № 2_9
 
     @Step("Проверка заголовка блока")
     public void checkBlockTitle() {

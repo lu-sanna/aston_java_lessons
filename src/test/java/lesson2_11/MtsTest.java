@@ -41,7 +41,6 @@ public class MtsTest {
     @Test
     @DisplayName("Проверка заголовка блока онлайн пополнения")
     @Description("Тест проверяет корректность отображения заголовка блока 'Онлайн пополнение без комиссии'")
-    @Severity(SeverityLevel.CRITICAL)
     @Story("Пользователь видит заголовок блока оплаты")
     void testBlockTitle() {
         mtsPage.checkBlockTitle();
@@ -49,8 +48,7 @@ public class MtsTest {
 
     @Test
     @DisplayName("Проверка логотипов платежных систем")
-    @Description("Тест проверяет наличие и отображение логотипов Visa, Mastercard и Belkart")
-    @Severity(SeverityLevel.NORMAL)
+    @Description("Тест проверяет наличие и отображение логотипов Visa, Mastercard")
     @Story("Пользователь видит поддерживаемые платежные системы")
     void testPaymentSystemsLogos() {
         mtsPage.checkPaymentSystemsLogos();
@@ -59,7 +57,6 @@ public class MtsTest {
     @Test
     @DisplayName("Проверка ссылки 'Подробнее о сервисе'")
     @Description("Тест проверяет работоспособность и корректность ссылки на подробную информацию")
-    @Severity(SeverityLevel.MINOR)
     @Story("Пользователь может перейти к подробному описанию сервиса")
     void testDetailsLink() {
         mtsPage.checkDetailsLink();
@@ -68,7 +65,6 @@ public class MtsTest {
     @Test
     @DisplayName("Проверка функциональности формы оплаты")
     @Description("Тест проверяет базовую функциональность формы оплаты услуг связи")
-    @Severity(SeverityLevel.CRITICAL)
     @Story("Пользователь может заполнить форму и отправить данные")
     void testPaymentFormFunctionality() {
         mtsPage.testPaymentFormFunctionality();
@@ -77,7 +73,6 @@ public class MtsTest {
     @Test
     @DisplayName("Проверка плейсхолдеров для всех услуг")
     @Description("Тест проверяет корректность плейсхолдеров для всех вариантов оплаты")
-    @Severity(SeverityLevel.NORMAL)
     @Story("Пользователь видит подсказки в полях ввода для разных услуг")
     void testAllServicesPlaceholders() {
         mtsPage.checkAllServicesPlaceholders();
@@ -86,7 +81,6 @@ public class MtsTest {
     @Test
     @DisplayName("Проверка модального окна оплаты услуг связи")
     @Description("Тест проверяет корректность отображения модального окна с платежной формой")
-    @Severity(SeverityLevel.CRITICAL)
     @Story("Пользователь видит корректную информацию в платежной форме")
     void testConnectionPaymentWithModal() {
         driver.navigate().refresh();
@@ -100,7 +94,7 @@ public class MtsTest {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             WebElement acceptButton = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//button[contains(text(), 'Принять') or contains(text(), 'Принять все')]")
+                    By.xpath("//button[contains(text(), 'Принять') or contains(text(), 'Отклонить')]")
             ));
             acceptButton.click();
             wait.until(ExpectedConditions.invisibilityOf(acceptButton));
